@@ -1,0 +1,13 @@
+ID
+ProcessoFull
+IdProcesso
+TituloProcesso
+Data
+Arquivo
+ScopeContent
+AcessoRestrito
+LocalizacaoFisica
+LocalizacaoAnterior
+AnotacoesLinguagem
+AnotacoesTecnicas
+MaterialRelacionado

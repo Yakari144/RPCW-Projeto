@@ -12,6 +12,15 @@ router.get('/', function(req, res, next) {
     res.render('index', {d: data});
 });
 
+router.get('/admin', function(req, res){
+  res.redirect('/protegida')
+})
+
+
+router.get('/consumer', function(req, res){
+  res.redirect('/')
+})
+
 function verificaAutenticacao(req, res, next){
   console.log('User (verif.): ' + JSON.stringify(req.user))
   if(req.isAuthenticated()){

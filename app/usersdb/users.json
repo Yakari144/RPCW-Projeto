@@ -5,8 +5,16 @@
             "username": "jcr",
             "password": "123",
             "name": "José Carlos Ramalho",
-            "level": "admin",
+            "level": "consumer",
             "dateCreated": "2023-04-24"
+        },
+        {
+            "id": "u2",
+            "username": "ykr",
+            "password": "144",
+            "name": "Joao Santos",
+            "level": "admin",
+            "dateCreated": "2023-06-20"
         }
     ]
 }
