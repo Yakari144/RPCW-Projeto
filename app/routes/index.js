@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var axios = require('axios')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,12 +14,24 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/admin', function(req, res){
-  res.redirect('/protegida')
+  var data = new Date().toISOString().substring(0,16)
+  axios.get('http://localhost:8081/registos')
+            .then(dados =>{
+              if(req.user && req.user.level == 'admin'){
+                res.render('tabela', {registos: dados.data , admin: true, d: data});
+                console.log('Admin ',req.user)
+              }else{
+                res.render('tabela', {registos: dados.data , admin: false, d: data});
+              }
+            })
+            .catch(erro =>{
+                return erro
+            })
 })
 
 
 router.get('/consumer', function(req, res){
-  res.redirect('/')
+  res.redirect('/admin')
 })
 
 function verificaAutenticacao(req, res, next){

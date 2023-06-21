@@ -65,3 +65,6 @@ with open('colunas.txt', 'w') as f:
     for item in df.columns:
         f.write("%s\n" % item)
     f.close()
+
+# write to json with utf-8 encoding
+df.to_json('tratado.json', orient='records', lines=True, force_ascii=False)

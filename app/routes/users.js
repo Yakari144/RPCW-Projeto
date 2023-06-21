@@ -29,11 +29,12 @@ router.post('/login', passport.authenticate('local'),
 function (req, res) {
     console.log('Na cb do POST login...')
     console.log('Auth: ' + JSON.stringify(req.user))
-    var level = req.user.level
-    if(level == 'admin')
-      res.redirect('/admin')
-    else
-      res.redirect('/consumer')
+    res.redirect('/admin')
+    //var level = req.user.level
+    //if(level == 'admin')
+    //  res.redirect('/admin')
+    //else
+    //  res.redirect('/consumer')
 })
 
 module.exports = router;
