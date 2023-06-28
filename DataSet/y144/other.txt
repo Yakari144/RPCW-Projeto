@@ -1,0 +1,61 @@
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Manuel</nome> <nome>Magalhaes</nome> <nome>Cerqueira</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Luis</nome> <nome>Oliveira</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  .  <nome>Bento</nome> <nome>Ribeiro</nome> <nome>Vale</nome>, tio paterno.  <nome>Francisco</nome> <nome>Malheiro</nome>,<nome>Primo</nome> materno.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Antonio</nome> <nome>Jose</nome> <nome>Couto</nome> <nome>Lemos</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Pedro</nome> <nome>Alpoim</nome> <nome>Silva</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Francisco</nome> <nome>Manuel</nome> <nome>Dias</nome> <nome>Barbosa</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  .  <nome>Antonio</nome> <nome>Alvares</nome>, tio paterno.  <nome>Antonio</nome> <nome>Jose</nome> <nome>Pinheiro</nome> <nome>Silva</nome>, tio materno.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Alexandre</nome> <nome>Pereira</nome> <nome>Pinto</nome>,<nome>Irmao</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Verissimo</nome> <nome>Jose</nome> <nome>Machado</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Inacio</nome> <nome>Freitas</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  .  <nome>Jose</nome> <nome>Costa</nome> <nome>Ribeiro</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Diogo</nome> <nome>Freitas</nome> <nome>Almada</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  .  <nome>Antonio</nome> <nome>Matos</nome> <nome>Carvalho</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Foi</nome> anexada a VILA COVA,<nome>Santa</nome> <nome>Maria</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Manuel</nome> <nome>Sousa</nome> <nome>Meneses</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Manuel</nome> <nome>Goncalves</nome> <nome>Penso</nome>, irmão paterno.  <nome>Jose</nome> <nome>Antonio</nome> <nome>Jorge</nome> <nome>Soares</nome>, tio avô materno.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  .  <nome>Francisco</nome> <nome>Correia</nome> <nome>Salgado</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Goncalo</nome> <nome>Ribeiro</nome>,<nome>Irmao</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Sebastiao</nome> <nome>Sousa</nome> <nome>Rebelo</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Manuel</nome> <nome>Alvares</nome> <nome>Sousa</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Manuel</nome> <nome>Alvares</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Mudou</nome> o nome para <nome>Joao</nome> <nome>Costa</nome> <nome>Pereira</nome> <nome>Mota</nome>. <nome>Ver</nome> <nome>Joao</nome> <nome>Jose</nome> <nome>Pereira</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Foi</nome> anexada a VILARELHO RAIA,<nome>Santiago</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Viuvo</nome> de <nome>Ana</nome> <nome>Pimentel</nome> <nome>Barbosa</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Antonio</nome> <nome>Luis</nome> <nome>Magalhaes</nome> <nome>Silva</nome> <nome>Alves</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  .  <nome>Em</nome> <nome>Anexo</nome>: <nome>Demanda</nome> contra o ordinando.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Jose</nome> <nome>Maria</nome> <nome>Maia</nome>, tio materno.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Foi</nome> anexada a VENDA NOVA,<nome>Sao</nome> <nome>Simao</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Jose</nome> <nome>Maria</nome> <nome>Tavôra</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  .  <nome>Antonio</nome> <nome>Carvalho</nome>, tio avô materno.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Foi</nome> anexada a ABACAO,<nome>Sao</nome> <nome>Tome</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  .  <nome>Jose</nome> <nome>Cardoso</nome>, tio paterno.  <nome>Frei</nome> <nome>Jose</nome> <nome>Guedes</nome> <nome>Prazeres</nome>, tio materno.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Residente</nome> em <nome>Guimaraes</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Foi</nome> anexada a COVELAES,<nome>Santa</nome> <nome>Marinha</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Alexandre</nome> <nome>Pereira</nome> <nome>Azevedo</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Justificacao</nome> de <nome>Compatriotado</nome>.  <nome>Antonio</nome> <nome>Jose</nome> <nome>Sousa</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Frei</nome> <nome>Manuel</nome> <nome>Azevedo</nome> <nome>Magalhaes</nome>, tio paterno.  <nome>Joao</nome> <nome>Cordeiro</nome>,<nome>Primo</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Exposto</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Ver</nome> <nome>Pedro</nome> <nome>Sao</nome> <nome>Bento</nome>,<nome>Frei</nome>. <nome>Nome</nome> de <nome>Batismo</nome>, GASPAR.  <nome>Religioso</nome> da <nome>Ordem</nome> do <nome>Carmo</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Joao</nome> <nome>Lemos</nome> <nome>Seixas</nome> <nome>Castelo</nome> <nome>Branco</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Antonio</nome> <nome>Araujo</nome> <nome>Vasconcelos</nome> <nome>Pereira</nome> <nome>Alvim</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Silvestre</nome> <nome>Pita</nome> <nome>Desgranges</nome>, irmão. <nome>Ordem</nome> <nome>Cristo</nome>. <nome>Tomar</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Joao</nome> <nome>Manuel</nome> <nome>Sousa</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Diogo</nome> <nome>Teixeira</nome> <nome>Machado</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Antonio</nome> <nome>Jose</nome> <nome>Magalhaes</nome>, tio paterno.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Miguel</nome> <nome>Meira</nome>, pai.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Manuel</nome> <nome>Sampaio</nome> <nome>Ribeiro</nome>,<nome>Irmao</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Domingos</nome> <nome>Cardoso</nome> <nome>Osorio</nome>, tio materno.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  .  <nome>Assistente</nome> na <nome>Ilha</nome> da <nome>Madeira</nome> e no <nome>Brasil</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Manuel</nome> <nome>Teixeira</nome> <nome>Sousa</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Luis</nome> <nome>Augusto</nome> <nome>Oliveira</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  <nome>Manuel</nome> <nome>Barros</nome> <nome>Costa</nome>,<nome>Irmao</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Em</nome> <nome>Anexo</nome>: <nome>Requisitoria</nome> para o <nome>Bispado</nome> de <nome>Tui</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Antonio</nome> <nome>Pinto</nome> <nome>Magalhaes</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Antonio</nome> <nome>Pinheiro</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Antonio</nome> <nome>Costa</nome>, tio paterno.  <nome>Joao</nome> <nome>Manuel</nome> <nome>Costa</nome>, tio paterno.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Luis</nome> <nome>Costa</nome>, irmão.
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Foi</nome> anexada a MARGARIDE,<nome>Santa</nome> <nome>Eulalia</nome>.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  .  <nome>Foi</nome> anexada a VILA CONDE-SAO JOAO BATISTA.
+<nome>Série</nome> <nome>Inquirições</nome> de genere:  .
+<nome>Série</nome> <nome>Inquirições</nome> de genere: <nome>Jose</nome> <nome>Silva</nome>,<nome>Irmao</nome>.

@@ -1,19 +1,22 @@
+extends layout
 block content
   .w3-card-4
     header.w3-container.w3-teal
-      h1= r.tituloProcesso
+      h1= r.TituloProcesso
     .w3-container
         ul.w3-ul.w3-card-4
-            li #[b ID :] #{r.id}
-            li #[b ProcessoFull :] #{r.processoFull}
-            li #[b IdProcesso :] #{r.idProcesso}
-            li #[b TituloProcesso :] #{r.tituloProcesso}
-            li #[b Data :] #{r.data}
-            li #[b Arquivo :] #{r.arquivo}
-            li #[b ScopeContent :] #{r.scopeContent}
-            li #[b AcessoRestrito :] #{r.acessoRestrito}
-            li #[b LocalizacaoFisica :] #{r.localizacaoFisica}
-            li #[b LocalizacaoAnterior :] #{r.localizacaoAnterior}
-            li #[b AnotacoesLinguagem :] #{r.anotacoesLinguagem}
-            li #[b AnotacoesTecnicas :] #{r.anotacoesTecnicas}
-            li #[b MaterialRelacionado :] #{r.materialRelacionado}
+            li #[b ID :] #{r.ID}
+            li #[b ProcessoFull :] #{r.ProcessoFull}
+            li #[b IdProcesso :] #{r.IdProcesso}
+            li #[b TituloProcesso :] #{r.TituloProcesso}
+            li #[b Data :] #{r.Data}
+            li #[b Arquivo :] #{r.Arquivo}
+            li #[b ScopeContent :] #{r.ScopeContent}
+            li #[b AcessoRestrito :] #{r.AcessoRestrito}
+            li #[b LocalizacaoFisica :] #{r.LocalizacaoFisica}
+            li #[b LocalizacaoAnterior :] #{r.LocalizacaoAnterior}
+            li #[b AnotacoesLinguagem :] #{r.AnotacoesLinguagem}
+            li #[b AnotacoesTecnicas :] #{r.AnotacoesTecnicas}
+            li #[b MaterialRelacionado :] #{r.MaterialRelacionado}
+    footer.w3-container.w3-teal
+      h5 Generated in #{d} - #[a(href="/admin") Voltar ]

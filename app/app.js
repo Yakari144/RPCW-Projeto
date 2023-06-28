@@ -9,10 +9,24 @@ var session = require('express-session')
 var FileStore = require('session-file-store')(session)
 var passport = require('passport')
 var LocalStrategy = require('passport-local').Strategy
-var axios = require('axios')
+
+//Import the mongoose module
+var mongoose = require('mongoose');
+//Set up default mongoose connection
+var mongoDB = 'mongodb://127.0.0.1/api';
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
+//Get the default connection
+var db = mongoose.connection;
+//Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', function() {
+    console.log("Conexão ao MongoDB realizada com sucesso...");
+});
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var User = require('./controllers/user');
 
 var app = express();
 
@@ -31,14 +45,14 @@ app.use(session({
   saveUninitialized: true
 }))
 
-// Configuração da estratégia local
+//Configuração da estratégia local
 passport.use(new LocalStrategy(
   {usernameField: 'username'}, (username, password, done) => {
-    axios.get('http://localhost:7025/users?username=' + username)
+    User.login(username,password)
       .then(dados => {
-        const user = dados.data[0]
-        if(!user) { return done(null, false, {message: 'Utilizador inexistente!\n'})}
-        if(password != user.password) { return done(null, false, {message: 'Password inválida!\n'})}
+        const user = dados
+        if(user==1) { return done(null, false, {message: 'Utilizador inexistente!\n'})}
+        if(user==2) { return done(null, false, {message: 'Password inválida!\n'})}
         return done(null, user)
       })
       .catch(erro => done(erro))
@@ -49,14 +63,14 @@ passport.use(new LocalStrategy(
 passport.serializeUser((user,done) => {
   console.log('Vou serializar o user na sessão: ' + JSON.stringify(user))
   // Serialização do utilizador. O passport grava o utilizador na sessão aqui.
-  done(null, user.id)
+  done(null, user._id)
  })
 
   // Desserialização: a partir do id obtem-se a informação do utilizador
  passport.deserializeUser((uid, done) => {
   console.log('Vou desserializar o user: ' + uid)
-  axios.get('http://localhost:7025/users/' + uid)
-    .then(dados => done(null, dados.data))
+  User.getUser(uid)
+    .then(dados => done(null, dados))
     .catch(erro => done(erro, false))
  })
  

@@ -1,20 +1,24 @@
-{
-    "users": [
-        {
-            "id": "u1",
-            "username": "jcr",
-            "password": "123",
-            "name": "José Carlos Ramalho",
-            "level": "consumer",
-            "dateCreated": "2023-04-24"
-        },
-        {
-            "id": "u2",
-            "username": "ykr",
-            "password": "144",
-            "name": "Joao Santos",
-            "level": "admin",
-            "dateCreated": "2023-06-20"
-        }
-    ]
-}
+[
+    {
+        "id": "u1",
+        "username": "jcr",
+        "password": "123",
+        "name": "José Carlos Ramalho",
+        "email": "jcr@di.uminho.pt",
+        "filiacao": "docente",
+        "level": "consumer",
+        "dateCreated": "2023-04-24",
+        "dateLastLogin": "2023-04-24"
+    },
+    {
+        "id": "u2",
+        "username": "ykr",
+        "password": "144",
+        "name": "Joao Santos",
+        "email": "pg50477@uminho.pt",
+        "filiacao": "aluno",
+        "level": "admin",
+        "dateCreated": "2023-06-20",
+        "dateLastLogin": "2023-04-24"
+    }
+]

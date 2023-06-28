@@ -1,0 +1,25 @@
+extends layout 
+block content   
+    .w3-card-4
+        header.w3-container.w3-purple
+            h2 Novo Utilizador
+        form.w3-container(method="POST")
+            fieldset
+                legend Metadata
+                label username
+                input.w3-input.w3-round(type="text" name="username")
+                label password
+                input.w3-input.w3-round(type="password" name="password")
+                label name
+                input.w3-input.w3-round(type="text" name="name")
+                label email
+                input.w3-input.w3-round(type="text" name="email")
+                label filiacao
+                input.w3-input.w3-round(type="text" name="filiacao")
+                if admin
+                    label level
+                    input.w3-input.w3-round(type="text" name="level")                                  
+            button.w3-btn.w3-purple.w3-mb-2(type="submit") Add
+               
+        footer.w3-container.w3-purple
+            h5 Generated in #{d} - [#[a(href="/") Return]]
