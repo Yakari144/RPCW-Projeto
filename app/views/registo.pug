@@ -11,7 +11,9 @@ block content
             li #[b TituloProcesso :] #{r.TituloProcesso}
             li #[b Data :] #{r.Data}
             li #[b Arquivo :] #{r.Arquivo}
-            li #[b ScopeContent :] #{r.ScopeContent}
+            // Q: aparece-me com aspas nao permitindo que o codigo html guardado de r.ScopeContent seja interpretado, como resolver?
+            // A: usar !{r.ScopeContent} em vez de #{r.ScopeContent}
+            li #[b ScopeContent :] !{r.ScopeContent}
             li #[b AcessoRestrito :] #{r.AcessoRestrito}
             li #[b LocalizacaoFisica :] #{r.LocalizacaoFisica}
             li #[b LocalizacaoAnterior :] #{r.LocalizacaoAnterior}

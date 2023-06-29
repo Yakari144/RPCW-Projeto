@@ -84,6 +84,17 @@ module.exports.list = (page,limit,sort,ord,local,data) => {
         }
 }
 
+module.exports.getRegisto = id => {
+        id = parseInt(id)
+        return Registo.findOne({"IdProcesso":id})
+            .then(docs => {
+                return docs
+            })
+            .catch(erro => {
+                    return erro
+            })
+    }
+
 module.exports.getRegistoTitle = id => {
     return Registo.findOne({TituloProcesso:id})
         .then(docs => {

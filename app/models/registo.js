@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var registoSchema = new mongoose.Schema({
     "ID":String,
     "ProcessoFull":String,
-    "IdProcesso":String,
+    "IdProcesso":Number,
     "TituloProcesso":String,
     "Data":String,
     "Arquivo":String,

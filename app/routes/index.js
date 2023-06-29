@@ -120,7 +120,21 @@ router.get('/admin', verificaAutenticacao, function(req, res){
 
 router.get('/registo/:id', verificaAutenticacao, function(req, res,next){
   var data = new Date().toISOString().substring(0,16)
-  Registo.getRegistoTitle(req.params.id)
+  // if (req.params.id[0] is a number)
+  if(req.params.id[0] >= '0' && req.params.id[0] <= '9'){
+    Registo.getRegisto(req.params.id)
+            .then(dados =>{
+              if(req.user && req.user.level == 'admin'){
+                res.render('registo', {r: dados , admin: true, d: data});
+              }else{
+                res.render('registo', {r: dados , admin: false, d: data});
+              }
+            })
+            .catch(erro =>{
+                return erro
+            })
+    }else
+    Registo.getRegistoTitle(req.params.id)
             .then(dados =>{
               if(req.user && req.user.level == 'admin'){
                 res.render('registo', {r: dados , admin: true, d: data});
