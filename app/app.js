@@ -13,7 +13,8 @@ var LocalStrategy = require('passport-local').Strategy
 //Import the mongoose module
 var mongoose = require('mongoose');
 //Set up default mongoose connection
-var mongoDB = 'mongodb://mongodb/api';
+//var mongoDB = 'mongodb://mongodb/api';
+var mongoDB = 'mongodb://127.0.0.1/api';
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 //Get the default connection
 var db = mongoose.connection;

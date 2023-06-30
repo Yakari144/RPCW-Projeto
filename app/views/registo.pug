@@ -19,6 +19,8 @@ block content
             li #[b LocalizacaoAnterior :] #{r.LocalizacaoAnterior}
             li #[b AnotacoesLinguagem :] #{r.AnotacoesLinguagem}
             li #[b AnotacoesTecnicas :] #{r.AnotacoesTecnicas}
-            li #[b MaterialRelacionado :] #{r.MaterialRelacionado}
+            // Q: aparece-me com aspas nao permitindo que o codigo html guardado de r.MaterialRelacionado seja interpretado, como resolver?
+            // A: usar !{r.MaterialRelacionado} em vez de #{r.MaterialRelacionado}
+            li #[b MaterialRelacionado :] !{r.MaterialRelacionado}
     footer.w3-container.w3-teal
       h5 Generated in #{d} - #[a(href="/admin") Voltar ]

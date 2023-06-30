@@ -1,4 +1,5 @@
 var Registo = require('../models/registo')
+var Utils = require('../utils/utils')
 
 // Registo list
 module.exports.list = () => {
@@ -88,6 +89,9 @@ module.exports.getRegisto = id => {
         id = parseInt(id)
         return Registo.findOne({"IdProcesso":id})
             .then(docs => {
+                console.log('>'+docs.MaterialRelacionado+'<')
+                docs.MaterialRelacionado = Utils.handleMaterial(docs.MaterialRelacionado)
+                docs.ScopeContent = Utils.handleScopeContent(docs.ScopeContent)
                 return docs
             })
             .catch(erro => {
@@ -98,6 +102,8 @@ module.exports.getRegisto = id => {
 module.exports.getRegistoTitle = id => {
     return Registo.findOne({TituloProcesso:id})
         .then(docs => {
+                docs.MaterialRelacionado = Utils.handleMaterial(docs.MaterialRelacionado)
+                docs.ScopeContent = Utils.handleScopeContent(docs.ScopeContent)
                 return docs
         })
         .catch(erro => {
