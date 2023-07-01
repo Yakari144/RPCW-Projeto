@@ -1,5 +1,4 @@
 var Registo = require('../models/registo')
-var Utils = require('../utils/utils')
 
 // Registo list
 module.exports.list = () => {
@@ -13,7 +12,7 @@ module.exports.list = () => {
         })
 }
 
-module.exports.list = (page,limit,sort,ord,local,data) => {
+module.exports.list = (page,limit,sort,ord,local,data,search) => {
         // limit represents the page size
         limit = limit ? parseInt(limit) : 10
         // page represents the page number
@@ -29,6 +28,8 @@ module.exports.list = (page,limit,sort,ord,local,data) => {
         local = local ? local : ""
         // data represents the data to filter
         data = data ? data : ""
+        // search represents the search string
+        search = search ? search : ""
         // query represents the query to be performed
         var query = {}
         // if local is not empty, add it to the query
@@ -38,6 +39,9 @@ module.exports.list = (page,limit,sort,ord,local,data) => {
         // if data is not empty, add it to the query
         if(data != ""){
                 query.Data = data
+        }
+        if(search != ""){
+                query.TituloProcesso = new RegExp(search,'i')
         }
         console.log('query:',query,'sort:',sort,'ord:',ord,'page:',page,'limit:',limit)
         // if page is not empty, add it to the query
@@ -89,27 +93,12 @@ module.exports.getRegisto = id => {
         id = parseInt(id)
         return Registo.findOne({"IdProcesso":id})
             .then(docs => {
-                console.log('>'+docs.MaterialRelacionado+'<')
-                docs.MaterialRelacionado = Utils.handleMaterial(docs.MaterialRelacionado)
-                docs.ScopeContent = Utils.handleScopeContent(docs.ScopeContent)
                 return docs
             })
             .catch(erro => {
                     return erro
             })
     }
-
-module.exports.getRegistoTitle = id => {
-    return Registo.findOne({TituloProcesso:id})
-        .then(docs => {
-                docs.MaterialRelacionado = Utils.handleMaterial(docs.MaterialRelacionado)
-                docs.ScopeContent = Utils.handleScopeContent(docs.ScopeContent)
-                return docs
-        })
-        .catch(erro => {
-                return erro
-        })
-}
 
 module.exports.addRegisto = a => {
     return Registo.create(a)
@@ -122,7 +111,7 @@ module.exports.addRegisto = a => {
 }
 
 module.exports.updateRegisto = (id,a) => {
-    return Registo.updateOne({_id: id},a)
+    return Registo.updateOne({IdProcesso: id},a)
         .then(Registo => {
                 return a
         })
@@ -131,18 +120,8 @@ module.exports.updateRegisto = (id,a) => {
         })
 }
 
-module.exports.updateRegistoTitle = (id,a) => {
-        return Registo.updateOne({TituloProcesso: id},a)
-            .then(Registo => {
-                    return a
-            })
-            .catch(erro => {
-                    return erro
-            })
-    }
-
 module.exports.deleteRegisto = id => {
-    return Registo.deleteOne({_id:id})
+    return Registo.deleteOne({IdProcesso:id})
         .then(Registo => {
                 return Registo
         })
@@ -150,13 +129,3 @@ module.exports.deleteRegisto = id => {
                 return erro
         })
 }
-
-module.exports.deleteRegistoTitle = id => {
-        return Registo.deleteOne({TituloProcesso:id})
-            .then(Registo => {
-                    return Registo
-            })
-            .catch(erro => {
-                    return erro
-            })
-    }

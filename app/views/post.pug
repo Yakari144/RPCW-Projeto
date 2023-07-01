@@ -1,0 +1,23 @@
+extends layout
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      .w3-container.w3-teal.w3-left.w3-center 
+        h2= post.IdProcesso +" - "+ post.TituloProcesso
+    .w3-container.w3-card-4.w3-khaki
+      ul.w3-ul.w3-card-4.w3-sand.w3-margin-top.w3-margin-bottom
+        li #[h1= post.title] 
+        li #[b Conteudo :] #{post.content}
+        li #[b Postado por:] #{post.username} em #{post.dateCreated} 
+    .w3-container.w3-card-4.w3-light-green
+      .w3-container.w3-left.w3-center
+        h3 Comentarios:
+      .w3-container.w3-right.w3-center
+        h3 #[a.w3-button.w3-round-xxlarge(href="/comentario/add/"+post._id) +]
+      .w3-container
+        each comentario in comentarios
+          ul.w3-ul.w3-card-4.w3-margin-top.w3-margin-bottom.w3-sand
+            li #[b #{comentario.username} :] #{comentario.content}
+              p postado em #{comentario.dateCreated}
+    footer.w3-container.w3-teal
+      h5 Generated in #{d} - #[a(href="/posts/"+post.IdProcesso) Voltar ]

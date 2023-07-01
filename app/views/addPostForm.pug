@@ -1,0 +1,21 @@
+extends layout 
+block content   
+    .w3-card-4
+        header.w3-container.w3-purple
+            h2 Novo Post
+        form.w3-container(method="POST" action="/posts/add")
+            fieldset
+                legend Metadata
+                label Titulo
+                input.w3-input.w3-round(type="text" name="title")
+                label Conteudo
+                input.w3-input.w3-round(type="text" name="content")
+                input(type="hidden" name="IdProcesso" value=""+idP)
+                input(type="hidden" name="TituloProcesso" value=""+tp)
+                input(type="hidden" name="username" value=""+username)
+                input(type="hidden" name="dataCreated" value=""+d)
+                                      
+            button.w3-btn.w3-purple.w3-mb-2(type="submit") Add
+               
+        footer.w3-container.w3-purple
+            h5 Generated in #{d} - [#[a(href="/") Return]]

@@ -2,7 +2,12 @@ extends layout
 block content
   .w3-card-4
     header.w3-container.w3-teal
-      h1= r.TituloProcesso
+      .w3-container.w3-teal.w3-left.w3-center 
+        h1= r.TituloProcesso
+      .w3-container.w3-teal.w3-right.w3-center
+        h3 
+          a.w3-button.w3-round-large(href="/posts/add/"+r.IdProcesso) Novo Post
+          a.w3-button.w3-round-large(href="/posts/"+r.IdProcesso) Posts
     .w3-container
         ul.w3-ul.w3-card-4
             li #[b ID :] #{r.ID}
@@ -11,16 +16,12 @@ block content
             li #[b TituloProcesso :] #{r.TituloProcesso}
             li #[b Data :] #{r.Data}
             li #[b Arquivo :] #{r.Arquivo}
-            // Q: aparece-me com aspas nao permitindo que o codigo html guardado de r.ScopeContent seja interpretado, como resolver?
-            // A: usar !{r.ScopeContent} em vez de #{r.ScopeContent}
             li #[b ScopeContent :] !{r.ScopeContent}
             li #[b AcessoRestrito :] #{r.AcessoRestrito}
             li #[b LocalizacaoFisica :] #{r.LocalizacaoFisica}
             li #[b LocalizacaoAnterior :] #{r.LocalizacaoAnterior}
             li #[b AnotacoesLinguagem :] #{r.AnotacoesLinguagem}
             li #[b AnotacoesTecnicas :] #{r.AnotacoesTecnicas}
-            // Q: aparece-me com aspas nao permitindo que o codigo html guardado de r.MaterialRelacionado seja interpretado, como resolver?
-            // A: usar !{r.MaterialRelacionado} em vez de #{r.MaterialRelacionado}
             li #[b MaterialRelacionado :] !{r.MaterialRelacionado}
     footer.w3-container.w3-teal
       h5 Generated in #{d} - #[a(href="/admin") Voltar ]

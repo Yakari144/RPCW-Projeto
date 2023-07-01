@@ -1,80 +1,126 @@
 extends layout
-
 block content
+  
   .w3-card-4
     header.w3-container.w3-teal
-      if admin 
-        h1 Registos #[a.w3-button.w3-round-large(href="/adicionar") + ]
-      else 
-        h1 Registos
+      .w3-container.w3-teal.w3-left.w3-center 
+        if admin 
+          h1 Registos #[a.w3-button.w3-round-large(href="/add") + ]
+        else 
+          h1 Registos
+      .w3-container.w3-teal.w3-right.w3-center
+        h3 
+          button.w3-button.w3-round-large.w3-teal.w3-margin-right(onclick="document.getElementById('id01').style.display='block'") Pesquisar
+          if admin
+            a.w3-button.w3-round-large(href="/addUser") Novo Utilizador
+          a.w3-button.w3-round-large(href="/users/logout") Logout
+        div.w3-modal(id="id01" style="display:none")
+          div.w3-modal-content.w3-card-4.w3-animate-zoom
+            header.w3-container.w3-teal
+              span.w3-button.w3-display-topright(onclick="document.getElementById('id01').style.display='none'") &times;
+              h2 Pesquisar
+            form.w3-container(action="/admin")
+              p
+                label.w3-text-teal Título
+                if qt
+                  input.w3-input.w3-border.w3-light-grey(type="text" name="titulo" value=qt)
+                else
+                  input.w3-input.w3-border.w3-light-grey(type="text" name="titulo" placeholder="Título do Processo")
+              p
+                label.w3-text-teal Data
+                if qd
+                  input.w3-input.w3-border.w3-light-grey(type="date" name="data" value=qd)
+                else
+                  input.w3-input.w3-border.w3-light-grey(type="date" name="data" placeholder="Data do Processo")  
+              p
+                label.w3-text-teal Local
+                if ql
+                  input.w3-input.w3-border.w3-light-grey(type="text" name="local" value=ql)
+                else
+                  input.w3-input.w3-border.w3-light-grey(type="text" name="local" placeholder="Localização Física")
+              p
+                label.w3-text-teal Ordenar por
+                select.w3-select.w3-border(name="_sort")
+                  if qs
+                    option(value=qs selected) #{qs}
+                  option(value="TituloProcesso") Título
+                  option(value="LocalizacaoFisica") Localização
+                  option(value="Data") Data
+              p
+                label.w3-text-teal Ordem
+                select.w3-select.w3-border(name="_order")
+                  if qo
+                    option(value=qo selected) #{qo}
+                  option(value="asc") Ascendente
+                  option(value="desc") Descendente
+              p
+                label.w3-text-teal Registos por página
+                select.w3-select.w3-border(name="_limit")
+                  if qr
+                    option(value=qr selected) #{qr}
+                  option(value="5") 5
+                  option(value="10") 10
+                  option(value="15") 15
+                  option(value="20") 20
+                  option(value="25") 25
+                  option(value="30") 30
+                  option(value="35") 35
+                  option(value="40") 40
+                  option(value="45") 45
+                  option(value="50") 50
+              p
+                button.w3-btn.w3-round.w3-teal.w3-margin-right(type="submit") Pesquisar
+                button.w3-btn.w3-round.w3-teal.w3-margin-right(onclick="document.getElementById('id01').style.display='none'") Cancelar
     .w3-container
-      table.w3-table-all#myTable2
+      table.w3-table-all
         tr
-          th(onclick="sortTable(0)") TituloProcesso
-          th(onclick="sortTable(1)") LocalizacaoFisica
-          th(onclick="sortTable(2)") Data
-
+          th
+            a.w3-button.w3-round-large(href="/admin?_page="+qp+"&_limit="+qr+"&titulo="+qt+"&data="+qd+"&local="+ql+"&_sort=TituloProcesso&_order="+qot) TituloProcesso
+          th
+            a.w3-button.w3-round-large(href="/admin?_page="+qp+"&_limit="+qr+"&titulo="+qt+"&data="+qd+"&local="+ql+"&_sort=LocalizacaoFisica&_order="+qol) LocalizacaoFisica
+          th
+            a.w3-button.w3-round-large(href="/admin?_page="+qp+"&_limit="+qr+"&titulo="+qt+"&data="+qd+"&local="+ql+"&_sort=Data&_order="+qod) Data
+          th Acções
         each r in registos
           tr
-            td= r.TituloProcesso
-            td= r.LocalizacaoFisica
-            td= r.Data
+            td
+              a(href="/admin?_page="+1+"&_limit="+qr+"&titulo="+r.TituloProcesso+"&data="+qd+"&local="+r.ql+"&_sort=TituloProcesso&_order=asc")= r.TituloProcesso
+            td
+              a(href="/admin?_page="+1+"&_limit="+qr+"&titulo="+qt+"&data="+qd+"&local="+r.LocalizacaoFisica+"&_sort=TituloProcesso&_order=asc")= r.LocalizacaoFisica
+            td
+              a(href="/admin?_page="+1+"&_limit="+qr+"&titulo="+qt+"&data="+r.Data+"&local="+ql+"&_sort=TituloProcesso&_order=asc")= r.Data
+            td
+              button.w3-btn.w3-round.w3-teal.w3-margin-right 
+                a(href="/registo/"+r.IdProcesso) Ver
+              if admin
+                button.w3-btn.w3-round.w3-teal.w3-margin-right 
+                  a(href="/admin/edit/"+r.IdProcesso) Editar
+                button.w3-btn.w3-round.w3-teal.w3-margin-right 
+                  a(href="/admin/delete/"+r.IdProcesso) Apagar
+      .w3-right
+        form
+          h4 Página #[input(type="number" name="_page" value=""+qp min="1" max=""+qps style="width:50px;" onchange="this.form.submit()")] de #[span= qps]
+          h4 #[input(type="number" name="_limit" value=""+qr min="1" max=""+qrs style="width:50px;" onchange="this.form.submit()")] registos por página
+          input(type="hidden" name="data" value=""+qd)
+          input(type="hidden" name="local" value=""+ql)
+          input(type="hidden" name="_sort" value=""+qs)
+          input(type="hidden" name="titulo" value=""+qt)
+          if qs == "TituloProcesso"
+            if qot == "asc"
+              input(type="hidden" name="_order" value="desc")
+            else
+              input(type="hidden" name="_order" value="asc")
+          else if qs == "LocalizacaoFisica"
+            if qol == "asc"
+              input(type="hidden" name="_order" value="desc")
+            else
+              input(type="hidden" name="_order" value="asc")
+          else if qs == "Data"
+            if qod == "asc"
+              input(type="hidden" name="_order" value="desc")
+            else
+              input(type="hidden" name="_order" value="asc")
+          else
+            input(type="hidden" name="_order" value="asc")
     footer.w3-container.w3-teal
-      h5 Generated in #{d}
-      
-  script.
-    function sortTable(n) {
-      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-      table = document.getElementById("myTable2");
-      switching = true;
-      // Set the sorting direction to ascending:
-      dir = "asc";
-      // Make a loop that will continue until
-      //no switching has been done: 
-      while (switching) {
-        // Start by saying: no switching is done:
-        switching = false;
-        rows = table.rows;
-        /* Loop through all table rows (except the
-        first, which contains table headers): */
-        for (i = 1; i < (rows.length - 1); i++) {
-          // Start by saying there should be no switching:
-          shouldSwitch = false;
-          /* Get the two elements you want to compare,
-          one from current row and one from the next: */
-          x = rows[i].getElementsByTagName("TD")[n];
-          y = rows[i + 1].getElementsByTagName("TD")[n];
-          /* Check if the two rows should switch place,
-          based on the direction, asc or desc: */
-          if (dir == "asc") {
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-              // If so, mark as a switch and break the loop:
-              shouldSwitch = true;
-              break;
-            }
-          } else if (dir == "desc") {
-            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-              // If so, mark as a switch and break the loop:
-              shouldSwitch = true;
-              break;
-            }
-          }
-        }
-        if (shouldSwitch) {
-          /* If a switch has been marked, make the switch
-          and mark that a switch has been done: */
-          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-          switching = true;
-          // Each time a switch is done, increase this count by 1:
-          switchcount ++;
-        } else {
-          /* If no switching has been done AND the direction is "asc",
-          set the direction to "desc" and run the while loop again. */
-          if (switchcount == 0 && dir == "asc") {
-            dir = "desc";
-            switching = true;
-          }
-        }
-      }
-    }
-    
+      h5 Generated in #{d} - #[a(href="/admin") Voltar ]

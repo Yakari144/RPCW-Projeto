@@ -1,0 +1,17 @@
+extends layout 
+block content   
+    .w3-card-4
+        header.w3-container.w3-purple
+            h2 Novo Comentario
+        form.w3-container(method="POST" action="/comentario/add")
+            fieldset
+                legend Conteudo
+                input(type="hidden" name="idRef" value=""+idP)
+                input.w3-input.w3-round(type="text" name="content")
+                input(type="hidden" name="username" value=""+username)
+                input(type="hidden" name="dataCreated" value=""+d)
+                                      
+            button.w3-btn.w3-purple.w3-mb-2(type="submit") Add
+               
+        footer.w3-container.w3-purple
+            h5 Generated in #{d} - [#[a(href="/post/"+idP) Return]]
