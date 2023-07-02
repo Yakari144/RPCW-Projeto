@@ -37,6 +37,7 @@ Permitimos a criação de novos registos de inquirição de género, bem como a 
 <img src="images/tabelaAdmin.png">
 <img src="images/newReg.png">
 <img src="images/delete.png">
+
 Os utilizadores podem também fazer um Post acerca de qualquer registo existente, bem como comentar os mesmos. Estas funcionalidades estão disponíveis para todos os utilizadores.
 <img src="images/newPost.png">
 <img src="images/newComent.png">
