@@ -43,13 +43,14 @@ Para utilizar a nossa aplicação, é necessário ter o Node.js instalado.
 Por forma a instalar as dependências, executar o comando `npm install` na pasta do projeto.
 ### Popular a base de dados
 Quanto a popular a base de dados utilizamos o ficheiro `DataSet/limpeza144.py` que limpa o dataset e o transforma em json, gerando o ficheiro `mongo/tratado.json`.
-Para popular a base de dados é necessário comentar a linha 21 do ficheiro docker-compose.yml e executar o comando `docker-compose up` na pasta do projeto.
+Para popular a base de dados é necessário comentar a linha 21 do ficheiro docker-compose.yml, descomentando a linha 22, e executar o comando `docker-compose up` na pasta do projeto.
 De seguida, executar o comando `docker exec -it mongodb bash` para entrar no container da base de dados e populamos os registos com o comando `mongoimport --db api --collection registos --file tratado.json --jsonArray` e os users com o comando `mongoimport --db api --collection users --file users.json --jsonArray`.
+
 ### Execução da aplicação
 Para executar a aplicação basta ceder permissoes de execução ao ficheiro `exec.sh` e executar o mesmo com o comando `./exec.sh` na pasta do projeto.
+
 ### Utilização da aplicação
 Para utilizar a aplicação, basta aceder ao endereço `localhost:7024` no browser.
-
 
 ## Conclusão
 Em suma, este trabalho permitiu-nos aprofundar os nossos conhecimentos em bases de dados, bem como a sua utilização em aplicações web, especificamente a utilizar o MongoDB, bem como a sua integração com o Node.js, o express e o pug.
