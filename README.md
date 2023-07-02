@@ -1,5 +1,9 @@
 # Inquirições de Génere
 
+## Autores
+* João Santos - pg50477
+* Júlio Gonçalves - pg50537
+
 ## Introdução
 Este trabalho tem como intuito a criação de uma interface web de navegação nos registos de inquirição de género, disponibilizados pelo docente. Para tal, foi necessário a criação de uma base de dados, a qual foi preenchida com os dados fornecidos pelo docente, posteriormente a serem tratados, e a criação de uma aplicação web, que permite a navegação nestes mesmos dados.
 
