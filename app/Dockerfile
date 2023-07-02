@@ -3,7 +3,7 @@ FROM node:18
 # Set the working directory inside the Docker image
 WORKDIR /app
 
-COPY package*.json .
+COPY package*.json ./
 
 # Install app dependencies
 RUN npm install

@@ -55,8 +55,9 @@ router.post('/register', (req,res,next) => {
           .catch(erro => {
             res.render('error', {error: erro, message: "Erro no armazenamento do registo de pessoa"})
           }) 
+        }else{
+          res.end("Username ja atribuido")
         }
-        res.end("Username ja atribuido")
     })
     .catch(erro => {
       res.render('error', {error: erro, message: "Erro a obter o registo de pessoa"})

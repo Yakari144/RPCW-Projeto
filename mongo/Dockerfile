@@ -2,6 +2,6 @@ from mongo
 
 WORKDIR /mongo
 
-COPY . .
+COPY . ./
 
 CMD ["mongod"]
