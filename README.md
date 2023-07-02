@@ -28,28 +28,45 @@ Esta também foi uma coluna do dataset à qual prestamos especial atenção, poi
 
 ## Funcionalidades
 A nossa aplicação web permite a navegação nos dados, através de uma interface web, onde é possível visualizar os registos de inquirição de género. Podemos também pesquisar por registos, através do nome, lugar ou data. 
+
 <img src="images/tabela.png">
+
 <img src="images/search.png">
+
 Esta navegação nos dados é feita através de uma tabela, onde cada linha representa um registo de inquirição de género e possui páginas dada a quantidade de registos.
 Nesta navegação, é possível ordenar os mesmos pelo nome (índice antroponímico), por lugar (índice toponímico) e data (índice cronológico).
+
 <img src="images/registo.png">
+
 Permitimos a criação de novos registos de inquirição de género, bem como a edição e remoção dos mesmos. No entanto, estas funcionalidades apenas estão disponíveis para utilizadores com permissões de admin.
+
 <img src="images/tabelaAdmin.png">
+
 <img src="images/newReg.png">
+
 <img src="images/delete.png">
 
 Os utilizadores podem também fazer um Post acerca de qualquer registo existente, bem como comentar os mesmos. Estas funcionalidades estão disponíveis para todos os utilizadores.
+
 <img src="images/newPost.png">
+
 <img src="images/newComent.png">
+
 <img src="images/post.png">
+
 <img src="images/posts.png">
 
 ## Utilizadores
 Quanto aos utilizadores da nossa aplicação estes necessitam de se registar e de efetuar login para a utilizar.
+
 <img src="images/home.png">
+
 <img src="images/registar.png">
+
 <img src="images/login.png">
+
 Qualquer utilizador se pode registar. No entanto, utilizadores com permissões de admin podem criar novos utilizadores, sejam estes com permissões de admin ou não.
+
 <img src="images/registarAdmin.png">
 
 ## Como utilizar
